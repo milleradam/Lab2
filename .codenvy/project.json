@@ -1,0 +1,1 @@
+{"mixinTypes":[],"runners":{"configs":{"system:/cpp/simple":{"ram":0,"variables":{},"options":{}}},"default":"system:/cpp/simple"},"builders":{"configs":{}},"description":"Lab 2 for CS4080","type":"cpp","attributes":{"language":["cpp"]}}
