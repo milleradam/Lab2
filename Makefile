@@ -12,3 +12,5 @@ ReadyQueue.o: ReadyQueue.cpp ReadyQueue.h
 Main.o: Main.cpp
 	g++ -c Main.cpp
 
+clean:
+	$(shell rm -f *.o)
