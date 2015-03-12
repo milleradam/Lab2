@@ -1,16 +1,12 @@
-SOURCES= Main.cpp Dispatcher.cpp PCB.cpp ReadyQueue.cpp
-OBJS = Main.o Dispatcher.o PCB.o ReadyQueue.o
-all: Dispatcher.o PCB.o ReadyQueue.o Main.o
-	g++ $(CFLAGS) $(OBJS)
+SOURCES= $(wildcard src/*.cpp)
+OBJECTS = $(patsubst %.cpp, %.o, $(SOURCES))
+CC=g++
 
-Dispatcher.o: Dispatcher.cpp Dispatcher.h
-	g++ -c Dispatcher.cpp
-PCB.o: PCB.cpp PCB.h
-	g++ -c PCB.cpp
-ReadyQueue.o: ReadyQueue.cpp ReadyQueue.h
-	g++ -c ReadyQueue.cpp
-Main.o: Main.cpp
-	g++ -c Main.cpp
 
+build: $(OBJECTS)
+	$(CC) $(OBJECTS)
+$(OBJECTS): src/%.o : src/%.cpp
+	$(CC) -c $< -o $@
+	
 clean:
-	$(shell rm -f *.o)
+	$(shell rm -f src/*.o)
