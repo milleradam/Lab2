@@ -1,3 +1,4 @@
+#pragma once
 #include <queue>
 #include "PCB.h"
 
@@ -6,7 +7,7 @@ class ReadyQueue{
 		std::queue<PCB> q; 
 
 	public:
-		ReadyQueue
+	//	ReadyQueue
 
 
-}
+};

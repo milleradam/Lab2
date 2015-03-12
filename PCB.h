@@ -1,4 +1,4 @@
-
+#pragma once
 enum State {READY, STOPPED, RUNNING, FINISHED};
 class PCB{
 	private:
@@ -16,4 +16,4 @@ class PCB{
 		void setId(int id);
 		void setTimeNeeded(int time);
 		void setTimeLeft(int time);
-}
+};
